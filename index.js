@@ -22,3 +22,10 @@ Navigation.events().registerAppLaunchedListener(() => {
     }
   })
 })
+
+Navigation.setDefaultOptions({
+  topBar: {
+    visible: false,
+    height: 0
+  }
+})
