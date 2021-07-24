@@ -3,9 +3,10 @@
  */
 import { Navigation } from 'react-native-navigation'
 
-import App from './App';
+import { WelcomeScreen, ProfileScreen } from './src'
 
-Navigation.registerComponent('WelcomeScreen', () => App)
+Navigation.registerComponent('WelcomeScreen', () => WelcomeScreen)
+Navigation.registerComponent('ProfileScreen', () => ProfileScreen)
 
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
@@ -15,6 +16,11 @@ Navigation.events().registerAppLaunchedListener(() => {
           {
             component: {
               name: 'WelcomeScreen'
+            }
+          },
+          {
+            component: {
+              name: 'ProfileScreen'
             }
           }
         ]
