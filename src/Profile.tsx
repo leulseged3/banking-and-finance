@@ -26,7 +26,6 @@ export const ProfileScreen: React.FC<IProfile> = (props) => {
       </View>
 
       <Text style={styles.balanceStyle}>Your Balance</Text>
-      {/* <View style={{ backgroundColor: '#f6f6f6' }}> */}
       <View style={styles.cardWrapper}>
         <Text style={styles.date}>June 14, 2020</Text>
         <View style={styles.moneyPercentWrapper}>
@@ -36,22 +35,37 @@ export const ProfileScreen: React.FC<IProfile> = (props) => {
         </View>
       </View>
 
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingVertical: 30, paddingHorizontal: 10 }}>
-        <View style={styles.iconWrapper}>
-          <Icon name="arrow-down" color="#EB1F9D" size={20} />
-        </View>
-        <View style={styles.iconWrapper}>
-          <Icon name="arrow-up" color="#35DC76" size={20} />
-        </View>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingVertical: 15, paddingHorizontal: 10 }}>
 
-        <View style={styles.iconWrapper}>
-          <View style={{ width: 25, height: 25, borderWidth: 2, borderColor: '#D7B666', justifyContent: 'center', alignItems: 'center' }}>
-            <Icon name="dollar" color="#D7B666" size={15} />
+        <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+          <View style={styles.iconWrapper}>
+            <Icon name="arrow-down" color="#EB1F9D" size={20} />
           </View>
+          <Text style={{ color: '#BCBCBC' }}>Sent</Text>
         </View>
 
-        <View style={styles.iconWrapper}>
-          <Icon name="cloud-upload" color="#6B77AA" size={20} />
+        <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+          <View style={styles.iconWrapper}>
+            <Icon name="arrow-up" color="#35DC76" size={20} />
+          </View>
+          <Text style={{ color: '#BCBCBC' }}>Recieved</Text>
+        </View>
+
+
+        <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+          <View style={styles.iconWrapper}>
+            <View style={{ width: 25, height: 25, borderWidth: 2, borderColor: '#D7B666', justifyContent: 'center', alignItems: 'center' }}>
+              <Icon name="dollar" color="#D7B666" size={15} />
+            </View>
+          </View>
+          <Text style={{ color: '#BCBCBC' }}>Loan</Text>
+        </View>
+
+        <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+          <View style={styles.iconWrapper}>
+            <Icon name="cloud-upload" color="#6B77AA" size={20} />
+          </View>
+          <Text style={{ color: '#BCBCBC' }}>Topup</Text>
         </View>
       </View>
 
