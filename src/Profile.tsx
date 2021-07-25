@@ -81,7 +81,8 @@ export const ProfileScreen: React.FC<IProfile> = (props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 34,
+    paddingHorizontal: 20,
+    paddingTop: 20,
     backgroundColor: '#F3F9FE'
   } as ViewStyle,
   imageStyle: {
@@ -95,7 +96,6 @@ const styles = StyleSheet.create({
   } as ViewStyle,
   iconStyle: {
     flex: 1,
-    padding: 10
   } as ViewStyle,
   balanceStyle: {
     fontSize: 22,

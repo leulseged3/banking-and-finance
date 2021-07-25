@@ -160,8 +160,8 @@ const styles = StyleSheet.create({
   } as TextStyle,
   transactionCard: {
     width: '100%',
-    height: 70,
-    borderRadius: 25,
+    height: 90,
+    borderRadius: 40,
     backgroundColor: '#fff',
     flexDirection: 'row',
     alignItems: 'center',
@@ -175,6 +175,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.34,
     shadowRadius: 6.27,
 
-    elevation: 18,
+    elevation: 24,
   } as ViewStyle
 })
