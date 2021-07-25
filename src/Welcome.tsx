@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native'
+import { StyleSheet, Text, TextStyle, View, ViewStyle, Image } from 'react-native'
 import { Button } from './components'
 import { Navigation, NavigationComponentProps } from 'react-native-navigation'
 
@@ -11,6 +11,7 @@ export const WelcomeScreen: React.FC<IWelcomeProps> = (props) => {
   const { componentId } = props
   return (
     <View style={styles.container}>
+      <Image source={require('../assets/images/clipart.png')} style={{ width: '100%', height: 300, borderRadius: 100, marginBottom: 20 }} />
       <Text style={styles.title}>Welcome</Text>
 
       <Text style={styles.subTitle}>
