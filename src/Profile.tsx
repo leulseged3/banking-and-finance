@@ -15,6 +15,7 @@ export const ProfileScreen: React.FC<IProfile> = (props) => {
       <View style={styles.header}>
         <Icon
           name="navicon" style={styles.iconStyle}
+          size={22}
           onPress={() => Navigation.push(componentId, {
             component: {
               name: 'TransactionsScreen'
@@ -62,6 +63,15 @@ export const ProfileScreen: React.FC<IProfile> = (props) => {
         <View style={styles.thisWeek}>
           <Text style={styles.thisWeekText}>This Week</Text>
         </View>
+      </View>
+
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingTop: 10 }}>
+        <Text>Jan</Text>
+        <Text>Feb</Text>
+        <Text>Mar</Text>
+        <Text>Apr</Text>
+        <Text>May</Text>
+        <Text>Jun</Text>
       </View>
 
       {/* <View style={{ transform: [ { rotate: "-90deg" } ] }}>
