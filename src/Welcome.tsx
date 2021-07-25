@@ -1,7 +1,14 @@
 import React from 'react'
 import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native'
 import { Button } from './components'
-export const WelcomeScreen: React.FC = () => {
+import { Navigation, NavigationComponentProps } from 'react-native-navigation'
+
+interface IWelcomeProps extends NavigationComponentProps {
+
+}
+
+export const WelcomeScreen: React.FC<IWelcomeProps> = (props) => {
+  const { componentId } = props
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome</Text>
@@ -13,7 +20,11 @@ export const WelcomeScreen: React.FC = () => {
       <Button
         text="Login"
         buttonStyle={styles.buttonStyle}
-        onPress={() => null}
+        onPress={() => Navigation.push(componentId, {
+          component: {
+            name: 'ProfileScreen'
+          }
+        })}
       />
 
       <View style={styles.signUpWrapper}>
@@ -34,7 +45,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: 34
+    paddingHorizontal: 34,
+    backgroundColor: '#F3F9FE'
   },
 
   title: {
