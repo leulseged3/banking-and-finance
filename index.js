@@ -3,17 +3,23 @@
  */
 import { Navigation } from 'react-native-navigation'
 
-import { WelcomeScreen, ProfileScreen, TransactionsScreen } from './src'
+import { WelcomeScreen, ProfileScreen, TransactionsScreen, BalanceScreen } from './src'
 
 Navigation.registerComponent('WelcomeScreen', () => WelcomeScreen)
 Navigation.registerComponent('ProfileScreen', () => ProfileScreen)
 Navigation.registerComponent('TransactionsScreen', () => TransactionsScreen)
+Navigation.registerComponent('BalanceScreen', () => BalanceScreen)
 
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
     root: {
       stack: {
         children: [
+          {
+            component: {
+              name: 'BalanceScreen'
+            }
+          },
           {
             component: {
               name: 'TransactionsScreen'
