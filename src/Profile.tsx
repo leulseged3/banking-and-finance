@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image, TextStyle, ViewStyle, ImageStyle } from 'react-native'
+import { StyleSheet, Text, View, Image, TextStyle, ViewStyle, ImageStyle, TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Slider from '@react-native-community/slider'
 import { Navigation, NavigationComponentProps } from 'react-native-navigation'
@@ -22,7 +22,15 @@ export const ProfileScreen: React.FC<IProfile> = (props) => {
             }
           })}
         />
-        <Image source={require('../assets/images/avatar1.png')} style={styles.imageStyle} />
+        <TouchableOpacity
+          onPress={() => Navigation.push(componentId, {
+            component: {
+              name: 'BalanceScreen'
+            }
+          })}
+        >
+          <Image source={require('../assets/images/avatar1.png')} style={styles.imageStyle} />
+        </TouchableOpacity>
       </View>
 
       <Text style={styles.balanceStyle}>Your Balance</Text>
