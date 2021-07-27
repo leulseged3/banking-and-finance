@@ -24,7 +24,7 @@ export const TransactionsScreen: React.FC<ITransactions> = (props) => {
           name="ellipsis-v"
           onPress={() => Navigation.push(componentId, {
             component: {
-              name: 'TransactionsScreen'
+              name: 'StatisticsScreen'
             }
           })}
           size={20}
