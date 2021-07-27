@@ -11,7 +11,7 @@ export const WelcomeScreen: React.FC<IWelcomeProps> = (props) => {
   const { componentId } = props
   return (
     <View style={styles.container}>
-      <Image source={require('../assets/images/clipart.png')} style={{ width: '100%', height: 300, borderRadius: 100, marginBottom: 20 }} />
+      <Image source={require('../assets/images/man_computer_clipart.png')} style={{ width: '100%', height: 300, borderRadius: 100, marginBottom: 20 }} />
       <Text style={styles.title}>Welcome</Text>
 
       <Text style={styles.subTitle}>
